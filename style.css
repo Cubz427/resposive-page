@@ -1,0 +1,444 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "whatevernow", sans-serif;
+    scroll-behavior: smooth;
+}
+
+/* Navigation Bar styling start */
+
+.navbar {
+    background: #131313;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.1rem;
+    position: sticky;
+    z-index: 999;
+    top: 0;
+}
+
+.navbarContainer {
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 50px;
+}
+
+#navbarLogo {
+    background-color: #78d5d7;
+    background-image: linear-gradient(to top, #78d5d7 0%, #3d6967 100%);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    display: flex;
+    align-items: center;
+    list-style: none;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 2.5rem;
+}
+
+.navbarMenu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+.navbarItem {
+    height: 80px;
+}
+
+.navbarLinks {
+    color: whitesmoke;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 120px;
+    text-decoration: none;
+    height: 100%;
+    transition: all 0.3s ease;
+}
+
+.navbarLinks:hover {
+    color: #D8973C ;
+}
+
+/* Navigation Bar styling ending */
+
+/* Mobile menu styling start */
+
+@media screen  and (max-width: 960px){
+
+    .navbarContainer{
+        display: flex;
+        justify-content: center;
+        height: 80px;
+        z-index: 1;
+        width: 100%;
+        max-width: 1300px;
+        padding: 0;
+    }
+
+    .navbarMenu{
+        display: grid;
+        grid-template-columns: auto;
+        margin: 0;
+        width: 100%;
+        position: absolute;
+        top: -1000px;
+        opacity: 1;
+        transition: all 0.5s ease;
+        z-index: -1;
+    }
+
+    .navbarMenu.active {
+        background: #131313;
+        top: 100%;
+        opacity: 1;
+        transition: all 0.5s ease;
+        z-index: 99;
+        height: 50vh;
+        font-size: 1.6rem;
+    }
+
+    #navbarLogo {
+        padding-left: 25px;
+
+    }
+
+
+    .navbarToggle .bar{
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        transition: all 0.3s ease-in-out;
+        background: #fff;
+    }
+
+    .navbarItem{
+        width: 100%;
+    }
+
+    .navbarLinks {
+        text-align: center;
+        padding: 2rem;
+        width: 100%;
+        display: grid;
+    }
+
+    #mobileMenu {
+        position: absolute;
+        top: 20%;
+        right: 5%;
+        transform: translate(5%, 20%);
+    }
+
+    .navbarToggle .bar {
+        display: block;
+        cursor: pointer;  
+    }
+    /* Making the burger icon to spin*/
+
+    #mobileMenu.is-active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    #mobileMenu.is-active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+
+    #mobileMenu.is-active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+}
+/* Mobile menu styling end */
+
+/* First section styling start */
+
+.highlight {
+    border-bottom: 4px solid (#3d6967);
+  }
+
+.main{
+    background-color: #131313;
+    background-image: linear-gradient(to top, #131313 0%, #3d6967 100%);
+    padding: 10rem 0;
+}
+
+.main h2{
+    color: azure;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 0 5rem 0 ;
+}
+
+.mainContainer{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    height: 95%;
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    padding: 0 50px;
+}
+
+.mainContainer img{
+    width: 100%;
+    padding-right: 1rem;
+    float: left;
+    height: auto;
+}
+
+.mainContainer p{
+    width: 100%;
+    float: right;
+    color: azure;
+    line-height: 29px;
+    padding-left: 1vw;
+    font-size: 1.5rem;
+}
+/* Main section ending */
+
+/* Main section mobile start */
+
+@media screen  and (max-width: 960px){
+    .mainContainer{
+        display: flex;
+        flex-direction: column;
+        margin-top: 0.5em;
+    }
+
+    .mainContent{
+        margin-top: 1.4em;
+        line-height: 1em;
+        font-size: 0.8em;
+    }
+}
+
+/* Main section mobile end */
+
+/* History section start */
+
+/* Pre-track era starting */
+.history{
+    background-color: #131313;
+    background-image: linear-gradient(to top, #131313 0%, #3d6967 100%);
+    padding: 5rem 0;
+    
+}
+
+.history h2{
+    color: azure;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 0 2rem 0 ;
+}
+
+
+.pre-track{
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    margin: 0 auto;
+    height: 95%;
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    padding: 0 50px;
+    margin-bottom: 100px;
+}
+
+
+.pre-trackImg img{
+    width: 100%;
+    padding-left: 1vw;
+    float: left;
+    height: auto;
+}
+
+.pre-trackContent{
+    width: 100%;
+    float: right;
+    color: azure;
+    line-height: 29px;
+    padding-right: 1vw;
+    font-size: 1.5rem;
+}
+
+/* Pre-track era ending */
+
+/* Pre-track era Mobile starting */
+
+@media screen  and (max-width: 960px){
+    .pre-track{
+        display: flex;
+        flex-direction: column;
+        margin-top: 0.5em;
+    }
+
+
+    .historyContent{
+        margin-top: 1.4em;
+        line-height: 1em;
+        font-size: 0.8em;
+    }
+
+    .pre-trackContent{
+        margin-bottom: 1em;
+    }
+}
+
+/* Pre-track era Mobile ending */
+
+/* Track era starting */
+.trackRacingEra{
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    margin: 0 auto;
+    height: 95%;
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    padding: 0 50px;
+    margin-bottom: 3rem;
+}
+
+.trackEra h2{
+    color: azure;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 0 2rem 0 ;
+}
+
+.trackRacingImg img{
+    width: 100%;
+    padding-right: 1vw;
+    float: left;
+    height: auto;
+}
+
+.trackRacingContent{
+    width: 100%;
+    float: right;
+    color: azure;
+    line-height: 27px;
+    padding-left: 1vw;
+    font-size: 1.3rem;
+}
+
+/* Track era ending */
+
+/* Track era Mobile starting */
+
+@media screen  and (max-width: 960px){
+    .trackRacingEra{
+        display: flex;
+        flex-direction: column;
+        margin-top: 0.5em;
+    }
+
+
+    .trackRacingEra .trackRacingImg{
+        margin-top: 1.4em;
+        line-height: 1em;
+        font-size: 0.8em;
+        margin-bottom: 1em;
+    }
+
+}
+
+/* Track era Mobile ending */
+
+
+/* History section ending */
+
+/* Present section start */
+
+.modernDay{
+    background-color: #131313;
+    background-image: linear-gradient(to top, #131313 0%, #3d6967 100%);
+    padding: 5rem 0;
+    
+}
+
+.modernDay h2{
+    color: azure;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 0 2rem 0 ;
+}
+
+
+.presentDay{
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    margin: 0 auto;
+    height: 95%;
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    padding: 0 50px;
+    margin-bottom: 3rem;
+}
+
+
+.presentDayImg img{
+    width: 100%;
+    padding-right: 1vw;
+    float: left;
+    height: auto;
+}
+
+.modernEraContent p{
+    width: 100%;
+    float: right;
+    color: azure;
+    line-height: 29px;
+    padding-left: 1vw;
+    font-size: 1.5rem;
+}
+
+/* Present section Mobile start */
+
+@media screen  and (max-width: 960px){
+    .presentDay{
+        display: flex;
+        flex-direction: column;
+        margin-top: 0.5em;
+    }
+
+
+    .presentDay .presentDayImg{
+        margin-top: 1.4em;
+        line-height: 1em;
+        font-size: 0.8em;
+        margin-bottom: 1em;
+    }
+
+}
+
+/* Present section Mobile end */
+
+/* Present section end */
